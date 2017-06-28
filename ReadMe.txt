@@ -1,15 +1,3 @@
-（3）数据库
-数据库名：test
-【user.sql】
-SET FOREIGN_KEY_CHECKS=0;
--- ------------------------------ Table structure for user-- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `puser` (  `id` int(11) NOT NULL,  `name` varchar(255) DEFAULT NULL,  `age` int(11) DEFAULT NULL,  `password` varchar(255) DEFAULT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
--- ------------------------------ Records of user-- ----------------------------
-INSERT INTO `puser` VALUES ('1', '7player', '18', '123456');
-
-
-
 a.创建 cluster 数据库 springbootdb：
 
 CREATE DATABASE springbootdb;
@@ -66,7 +54,7 @@ http://localhost:8080/swagger/index.html
 多数据源情况下Durid 日志监控
 添加RabbitMq
 添加数据缓冲处理机制
-添加二进制压缩 protuff 支持
+
 使用Docker
 使用jkens+maven 集成部署
 

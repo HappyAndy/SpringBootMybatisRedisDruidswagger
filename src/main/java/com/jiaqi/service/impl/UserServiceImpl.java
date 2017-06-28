@@ -2,9 +2,7 @@ package com.jiaqi.service.impl;
 
 import com.jiaqi.dao.cluster.CityDao;
 import com.jiaqi.dao.master.UserDao;
-import com.jiaqi.dao.master.PuserDao;
 import com.jiaqi.model.City;
-import com.jiaqi.model.Puser;
 import com.jiaqi.model.User;
 import com.jiaqi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,18 +19,10 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao; // 主数据源
 
-    @Autowired
-    private PuserDao puserDao; // 主数据源
 
     @Autowired
     private CityDao cityDao; // 从数据源
 
-    @Override
-    public Puser getUserInfo() {
-
-
-        return puserDao.getUserInfo();
-    }
 
     @Override
     public User findByName(String userName) {
