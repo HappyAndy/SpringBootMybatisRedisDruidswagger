@@ -4,9 +4,9 @@
 SET FOREIGN_KEY_CHECKS=0;
 -- ------------------------------ Table structure for user-- ----------------------------
 DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (  `id` int(11) NOT NULL,  `name` varchar(255) DEFAULT NULL,  `age` int(11) DEFAULT NULL,  `password` varchar(255) DEFAULT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `puser` (  `id` int(11) NOT NULL,  `name` varchar(255) DEFAULT NULL,  `age` int(11) DEFAULT NULL,  `password` varchar(255) DEFAULT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 -- ------------------------------ Records of user-- ----------------------------
-INSERT INTO `user` VALUES ('1', '7player', '18', '123456');
+INSERT INTO `puser` VALUES ('1', '7player', '18', '123456');
 
 
 
@@ -60,6 +60,16 @@ http://localhost:8080/getUserInfo
 REST 指的是一组架构约束条件和原则。满足这些约束条件和原则的应用程序或设计就是 RESTful。
 此外，有一款RESTFUL接口的文档在线自动生成+功能测试功能软件——Swagger UI，具体配置过程可移步《Spring Boot 利用 Swagger 实现restful测试》
 http://localhost:8080/swagger/index.html
+
+
+-----------------------------------------------------------------------------------------------------
+多数据源情况下Durid 日志监控
+添加RabbitMq
+添加数据缓冲处理机制
+添加二进制压缩 protuff 支持
+使用Docker
+使用jkens+maven 集成部署
+
 
 
 

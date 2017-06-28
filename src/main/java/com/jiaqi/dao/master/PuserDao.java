@@ -1,5 +1,6 @@
 package com.jiaqi.dao.master;
 
+import com.jiaqi.model.Puser;
 import com.jiaqi.model.User;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -9,12 +10,12 @@ import org.apache.ibatis.annotations.Mapper;
  * Created by bysocket on 07/02/2017.
  */
 @Mapper
-public interface UserDao2 {
+public interface PuserDao {
 
     /**
      * 根据用户名获取用户信息
      *
      * @return
      */
-    User getUserInfo();
+    Puser getUserInfo();
 }

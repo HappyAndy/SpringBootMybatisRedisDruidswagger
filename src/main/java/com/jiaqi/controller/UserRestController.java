@@ -1,6 +1,6 @@
 package com.jiaqi.controller;
 
-import com.jiaqi.model.User2;
+import com.jiaqi.model.User;
 import com.jiaqi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 用户控制层
  *
- * Created by bysocket on 07/02/2017.
  */
 @RestController
 public class UserRestController {
@@ -26,7 +25,7 @@ public class UserRestController {
      * @return
      */
     @RequestMapping(value = "/api/user", method = RequestMethod.GET)
-    public User2 findByName(@RequestParam(value = "userName", required = true) String userName) {
+    public User findByName(@RequestParam(value = "userName", required = true) String userName) {
         return userService.findByName(userName);
     }
 

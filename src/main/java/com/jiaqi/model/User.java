@@ -1,34 +1,33 @@
 package com.jiaqi.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
- * Created by zl on 2015/8/27.
+ * 用户实体类
+ *
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class User {
-    private String name;
-    private Integer age;
-    private String password;
 
-    public String getName() {
-        return name;
-    }
+    /**
+     * 城市编号
+     */
+    private Long id;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    /**
+     * 城市名称
+     */
+    private String userName;
 
-    public Integer getAge() {
-        return age;
-    }
+    /**
+     * 描述
+     */
+    private String description;
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+    private City city;
 
-    public String getPassword() {
-        return password;
     }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-}

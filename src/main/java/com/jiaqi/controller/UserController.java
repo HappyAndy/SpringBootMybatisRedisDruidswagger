@@ -1,5 +1,6 @@
 package com.jiaqi.controller;
 
+import com.jiaqi.model.Puser;
 import com.jiaqi.model.User;
 import com.jiaqi.service.UserService;
 import org.apache.log4j.Logger;
@@ -9,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Created by zl on 2015/8/27.
- */
 @RestController
 public class UserController {
 
@@ -22,8 +20,8 @@ public class UserController {
 
     @RequestMapping(value = "/getUserInfo" , method = RequestMethod.GET)
     @ResponseBody
-    public User getUserInfo() {
-        User user = userService.getUserInfo();
+    public Puser getUserInfo() {
+        Puser user = userService.getUserInfo();
         if(user!=null){
             System.out.println("user.getName():"+user.getName());
             logger.info("user.getAge():"+user.getAge());

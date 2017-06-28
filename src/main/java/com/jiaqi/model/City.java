@@ -1,10 +1,17 @@
 package com.jiaqi.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * 城市实体类
  *
- * Created by bysocket on 07/02/2017.
  */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class City {
 
     /**
@@ -27,35 +34,5 @@ public class City {
      */
     private String description;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getProvinceId() {
-        return provinceId;
-    }
-
-    public void setProvinceId(Long provinceId) {
-        this.provinceId = provinceId;
-    }
-
-    public String getCityName() {
-        return cityName;
-    }
-
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }

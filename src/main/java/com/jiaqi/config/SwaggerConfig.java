@@ -10,15 +10,11 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * Created by zl on 2015/8/27.
- */
 @Configuration
 @EnableSwagger
 @EnableAutoConfiguration
 @ComponentScan("com.jiaqi.controller")
-public class SwaggerConfig
-{
+public class SwaggerConfig {
 
     private SpringSwaggerConfig springSwaggerConfig;
 
@@ -28,8 +24,8 @@ public class SwaggerConfig
     }
 
 
-    public SwaggerSpringMvcPlugin customImplementation(){
-        return  new SwaggerSpringMvcPlugin(this.springSwaggerConfig)
+    public SwaggerSpringMvcPlugin customImplementation() {
+        return new SwaggerSpringMvcPlugin(this.springSwaggerConfig)
                 .apiInfo(apiInfo())
                 .useDefaultResponseMessages(false)
                 .includePatterns("/users.*");
@@ -39,6 +35,7 @@ public class SwaggerConfig
     /**
      * 创建该API的基本信息（这些基本信息会展现在文档页面中）
      * 访问地址：http://项目实际地址/swagger-ui.html
+     *
      * @return
      */
     private ApiInfo apiInfo() {
@@ -58,5 +55,5 @@ public class SwaggerConfig
                 .contact("sunf")
 //                .version("1.0")
                 .build();
-        }
     }
+}

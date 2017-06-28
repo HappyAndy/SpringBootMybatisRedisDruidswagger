@@ -28,11 +28,11 @@ public class SwaggerController {
         List<User> list = new ArrayList<User>();
 
         User user = new User();
-        user.setName("hello");
+        user.setUserName("hello");
         list.add(user);
 
         User user2 = new User();
-        user2.setName("world");
+        user2.setUserName("world");
         list.add(user2);
         return list;
     }
@@ -41,7 +41,7 @@ public class SwaggerController {
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
     public User getUserById(@PathVariable String name) {
         User user = new User();
-        user.setName(name);
+        user.setUserName(name);
         return user;
     }
 
@@ -54,7 +54,7 @@ public class SwaggerController {
     @ResponseBody
     public User getProduct(@ApiParam(value = "json参数", required = true) @PathVariable String proname) throws Exception {
         User user = new User();
-        user.setName(proname);
+        user.setUserName(proname);
         return user;
     }
 }

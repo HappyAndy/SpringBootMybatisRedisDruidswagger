@@ -1,6 +1,6 @@
 package com.jiaqi.dao.master;
 
-import com.jiaqi.model.User2;
+import com.jiaqi.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -18,5 +18,5 @@ public interface UserDao {
      * @param userName
      * @return
      */
-    User2 findByName(@Param("userName") String userName);
+    User findByName(@Param("userName") String userName);
 }

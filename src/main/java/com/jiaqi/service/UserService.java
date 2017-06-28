@@ -1,7 +1,7 @@
 package com.jiaqi.service;
 
+import com.jiaqi.model.Puser;
 import com.jiaqi.model.User;
-import com.jiaqi.model.User2;
 
 /**
  * Created by zl on 2015/8/27.
@@ -14,7 +14,7 @@ import com.jiaqi.model.User2;
  */
 public interface UserService {
 
-    public User getUserInfo();
+    public Puser getUserInfo();
 
     /**
      * 根据用户名获取用户信息，包括从库的地址信息
@@ -22,5 +22,5 @@ public interface UserService {
      * @param userName
      * @return
      */
-    User2 findByName(String userName);
+    User findByName(String userName);
 }
