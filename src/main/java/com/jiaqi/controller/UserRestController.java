@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserRestController {
 
-    @RequestMapping("/hello")
+    @RequestMapping(value = "/users/hello" ,method = RequestMethod.GET)
 
     public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
@@ -32,7 +32,7 @@ public class UserRestController {
      * @param userName
      * @return
      */
-    @RequestMapping(value = "/api/user", method = RequestMethod.GET)
+    @RequestMapping(value = "/users/user", method = RequestMethod.GET)
     public User findByName(@RequestParam(value = "userName", required = true) String userName) {
         return userService.findByName(userName);
     }

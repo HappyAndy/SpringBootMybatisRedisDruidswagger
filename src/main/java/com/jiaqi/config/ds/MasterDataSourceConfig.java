@@ -32,7 +32,6 @@ public class MasterDataSourceConfig {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-
     @Value("${master.datasource.url}")
     private String dbUrl;
 
@@ -44,6 +43,7 @@ public class MasterDataSourceConfig {
 
     @Value("${master.datasource.driverClassName}")
     private String driverClassName;
+
 
     @Value("${spring.datasource.initialSize}")
     private int initialSize;

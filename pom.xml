@@ -23,6 +23,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<version.jackson>2.8.9</version.jackson>
+        <com.dyuproject.protostuff.version>1.0.12</com.dyuproject.protostuff.version>
+        <com.google.gson.version>2.7</com.google.gson.version>
 	</properties>
 
 	<dependencies>
@@ -119,7 +121,56 @@
             <version>1.1.0</version>
         </dependency>
 
-    </dependencies>
+
+        <!--序列化框架-->
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-core</artifactId>
+            <version>${com.dyuproject.protostuff.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.dyuproject.protostuff</groupId>
+            <artifactId>protostuff-runtime</artifactId>
+            <version>${com.dyuproject.protostuff.version}</version>
+        </dependency>
+
+        <!-- 谷歌缓存Guava Cache是一种本地缓存实现，支持多种缓存过期策略。性能好，简单易用
+       https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${com.google.gson.version}</version>
+        </dependency>
+
+
+        <!--文件上传工具-->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.meidusa.toolkit</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+
+	</dependencies>
 
 	<build>
 		<plugins>
